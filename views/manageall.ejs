@@ -43,7 +43,7 @@
             <input type="hidden" name="cardIds[]" value="<%= card.id %>" />
             <input type="text" name="cardNames[]" value="<%= card.name %>" required />
             <input type="text" name="cardDescriptions[]" value="<%= card.description %>" required />
-            <button type="button" class="danger" onclick="deleteFlashcard(<%= card.id %>)">Delete</button>
+            <button type="button" class="danger" onclick="deleteFlashcard('<%= card.id %>')">Delete</button>
           </li>
         <% }) %>
       </ul>
