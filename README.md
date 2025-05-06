@@ -1,0 +1,77 @@
+📚 Description
+This FlashCard web application provides an intuitive graphical interface for users to create, manage, and study flashcards. Users can organize flashcards into decks, edit content, and test their knowledge in study mode. The project uses Node.js, Express, PostgreSQL, and EJS for dynamic page rendering.
+
+
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/KylerKeldonBrown/GUIFINALPROJ.git
+cd GUIFINALPROJ
+Install Dependencies
+bash
+Copy
+Edit
+npm install
+3. Set Up PostgreSQL
+Create a new PostgreSQL database.
+
+Run the SQL file (e.g., all.sql) to initialize your schema.
+
+4. Configure Environment Variables
+Create a .env file in the project root with the following variables:
+
+ini
+Copy
+Edit
+DB_USER=your_db_user
+DB_PASSWORD=your_db_password
+DB_HOST=localhost
+DB_PORT=5432
+DB_DATABASE=your_db_name
+PORT=3000
+🧠 Usage
+Start the Application
+bash
+Copy
+Edit
+npm start
+Visit the app in your browser at:
+
+Copy
+Edit
+http://localhost:3000
+Features
+✏️ Add Flashcards (Questions & Answers)
+
+🗃️ Manage or Update Flashcards
+
+🧪 Study Mode for reviewing cards
+
+🧼 Clean UI using gold, black, and purple design
+
+📁 Project Structure
+bash
+Copy
+Edit
+.
+├── app.js                  # Main application entry point
+├── config/                 # Database configuration
+├── controllers/            # Flashcard logic and route handlers
+├── models/                 # DB models for flashcards and decks
+├── public/                 # Static files (CSS, images)
+├── routes/                 # App routes
+├── views/                  # EJS templates (frontend UI)
+└── .env                    # Environment variables (not committed)
+
+
+🛠 Technologies Used
+Node.js
+
+Express.js
+
+PostgreSQL
+
+EJS Templating Engine
+
+HTML/CSS (Custom design)
