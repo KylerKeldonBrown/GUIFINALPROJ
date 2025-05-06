@@ -6,12 +6,12 @@ import {
   } from '../models/flashcardmodel.js';
   
   export const getAddPage = async (req, res) => {
-    res.render('add', { errors: {}, name: '', description: '' });  // Removed decks
+    res.render('add', { errors: {}, name: '', description: '' });  
   };
   
   export const getManageAllPage = async (req, res) => {
     const flashcards = await getAllFlashcards();
-    res.render('manageall', { flashcards });  // Removed decks
+    res.render('manageall', { flashcards }); 
   };
   
   export const postUpdateAllFlashcards = async (req, res) => {
@@ -41,7 +41,7 @@ import {
     }
   
     try {
-      await addFlashcard(name, description); // Removed deckid field from addFlashcard
+      await addFlashcard(name, description); 
       res.redirect('/add');  // Redirect back to Add page
     } catch (error) {
       res.status(500).render('add', { errors: { general: 'An unexpected error occurred' }, name, description });
@@ -50,13 +50,13 @@ import {
   
   export const getManagePage = async (req, res) => {
     const flashcards = await getAllFlashcards();
-    res.render('manage', { flashcards });  // Removed deck-related render
+    res.render('manage', { flashcards });  
   };
   
   export const postDeleteFlashcard = async (req, res) => {
     const { id } = req.params;
     await deleteFlashcard(id);
-    res.redirect('/manage');  // Redirect to the flashcard management page
+    res.redirect('/manage');  
   };
   
   export const postUpdateFlashcard = async (req, res) => {
