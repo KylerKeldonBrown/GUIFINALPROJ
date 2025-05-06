@@ -1,0 +1,295 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #1a1a1a; /* Dark background */
+    text-align: center;
+    color: #f4e1b2; /* Gold text color */
+  }
+  
+  /* Heading */
+  h1 {
+    margin-bottom: 30px;
+    color: #d6a700; /* Gold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Links */
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #9b59b6; /* Purple */
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  a:hover {
+    color: #f4e1b2; /* Gold on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+  }
+  
+  /* Navigation Bar */
+  nav {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  nav a {
+    padding: 8px 16px;
+    background-color: #9b59b6;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: #d6a700; /* Gold */
+    transform: scale(1.1);
+  }
+  
+  /* Deck Layout (Grid) */
+  .deck-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 16px;
+    border-radius: 12px;
+    background: #222; /* Dark background for the container */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  /* Flashcard Stack */
+  .flashcard-stack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 640px;
+    height: 420px;
+    margin: 0 auto;
+    perspective: 1000px;
+    gap: 12px;
+  }
+  
+  /* Arrows */
+  .arrow {
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: #d6a700; /* Gold */
+    transform: scale(1.1);
+  }
+  
+  /* Decks Page */
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #333;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+  
+  li:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transform: translateY(-5px); /* Floating effect */
+  }
+  
+  /* Flashcard */
+  .flashcard {
+    margin: 0 auto;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s, opacity 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #1a1a1a;
+    color: #f4e1b2; /* Gold text */
+  }
+  
+  .flashcard.active {
+    display: block;
+    opacity: 1;
+  }
+  
+  /* Card Flip */
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+  
+  .card-inner.flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #222;
+    box-sizing: border-box;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    background: #9b59b6; /* Purple */
+    color: white;
+  }
+  
+  /* Form Styles */
+  form {
+    display: grid;
+    gap: 12px;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+  
+  input[type="text"],
+  textarea,
+  select {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #9b59b6; /* Purple on focus */
+    outline: none;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #9b59b6; /* Purple */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d6a700; /* Gold */
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal.hidden {
+    display: none;
+  }
+  
+  .modal-content {
+    background-color: #222;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    position: relative;
+    color: #f4e1b2;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+  }
+  
+  .close:hover {
+    color: #f4e1b2; /* Gold */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 700px) {
+    body {
+      padding: 12px;
+    }
+    nav {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .deck-container {
+      grid-template-columns: 1fr;
+    }
+    .flashcard-stack {
+      width: 90%;
+      height: 220px;
+    }
+    ul {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+    .manage-card {
+      width: 100%;
+    }
+  }
+  
